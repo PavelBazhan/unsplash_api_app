@@ -1,0 +1,142 @@
+.content {
+  @include flexible(column nowrap, center, center);
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 100vw;
+
+  .error-block {
+    padding: 1em 3em;
+    color: #D24040;
+    border: 1px solid #D24040;
+    background: #F9DCDC;
+    border-radius: 10px;
+  }
+
+  .collection-list {
+    @include flexible(column wrap, center, center);
+    width: 960px;
+    margin: 0;
+    padding: 0 1em;
+    list-style-type: none;
+
+    .collection-list__item {
+      @include flexible(row nowrap, center, stretch);
+      background-color: $color-VeryLight;
+      width: 100%;
+      min-height: 470px;
+      margin: 1em 0;
+      box-shadow: 0px 0px 2px 1px #888;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0px 0px 2px 2px #888;
+      }
+
+      .collection-list__photo {
+        width: 50%;
+        background: $color-dummy;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .collection-list__info {
+        @include flexible(column nowrap, space-between, flex-start);
+        width: 50%;
+        padding: 1%;
+        box-sizing: border-box;
+
+        .collection-list__desc {
+          @include flexible(column nowrap, flex-start, flex-start);
+          width: 100%;
+          margin-bottom: 3em;
+
+          h2, p {
+            margin: 0 0 1em 0;
+          }
+
+          .collection-list__date {
+            text-align: right;
+            color: $color-Light;
+            font-style: italic;
+          }
+        }
+
+        .collection-list__desc.dummy {
+          .collection-list__title{
+            background: $color-dummy;
+            color: $color-dummy;
+          }
+          .collection-list__description {
+            background: $color-dummy;
+            color: $color-dummy;
+          }
+          .collection-list__date {
+            background: $color-dummy;
+            color: $color-dummy;
+          }
+          .button {
+            background: $color-dummy;
+            color: $color-dummy;
+          }
+        }
+
+
+
+        .collection-list__preview-block {
+          @include flexible(row nowrap, space-between, stretch);
+          width: 100%;
+
+          .collection-list__preview {
+            width: 32%;
+            min-height: 100px;
+            background: $color-dummy;
+
+            img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-pages {
+    @include flexible(row nowrap, center, center);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .navigation-pages__link {
+      a {
+        background: #eee;
+        text-align: center;
+        line-height: 2em;
+        display: block;
+        width: 2em;
+        height: 2em;
+
+        &:hover {
+          background: $color-VeryDark;
+          color: white;
+        }
+
+        &.disabled {
+          pointer-events: none;
+        }
+      }
+    }
+
+    .active {
+      a {
+        background-color: $color-VeryDark;
+        color: white;
+      }
+    }
+  }
+}

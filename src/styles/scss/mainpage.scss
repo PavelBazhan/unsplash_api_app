@@ -1,0 +1,15 @@
+.content {
+  @include flexible(column nowrap, center, center);
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 100vw;
+
+  .app-description {
+    width: 800px;
+    line-height: 1.4em;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

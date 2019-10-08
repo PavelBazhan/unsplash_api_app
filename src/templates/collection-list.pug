@@ -1,0 +1,36 @@
+section.content.hidden#collections
+  h1 Collections
+
+  div.error-block.hidden Произошла ошибка:
+  ul.collection-list
+    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      li.collection-list__item
+        div.collection-list__photo
+          a(href = "#")
+            img
+        div.collection-list__info
+          div.collection-list__desc.dummy
+            h2.collection-list__title Title of Collection Placeholder
+            p.collection-list__description An aerial tour of strange, tiny planets across the far reaches of the outer galaxy
+            p.collection-list__date.cross_end Publish Date: 27 Nov 2018
+            a.button.button_black.cross_center(href = "#") Show Collection
+          div.collection-list__preview-block
+            div.collection-list__preview
+              a(href = "#")
+                img
+            div.collection-list__preview
+              a(href = "#")
+                img
+            div.collection-list__preview
+              a(href = "#")
+                img(border = "0")
+    
+  ul.navigation-pages
+    li.navigation-pages__link.prev
+      a(href = '<') &lt;
+    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      li.navigation-pages__link.number
+        a(href = '#')= val
+    li.navigation-pages__link.next
+      a(href = '>') &gt;
+  

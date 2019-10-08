@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import 'colors.scss';
+
+@mixin flexible($flow, $align1, $align2) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $align1;
+  align-items: $align2;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .button {
+    display: block;
+    width: 15em;
+    max-width: 80%;
+    height: 3em;
+    // box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin: 1em 0;
+    text-align: center;
+    line-height: 3em;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &_blue {
+      background-color: $color-blue;
+      color: white;
+      border-color: $color-blue;
+
+      &:hover {
+        background-color: $color-blueDarken;
+        border-color: $color-blueDarken;
+        color: white;
+      }
+    }
+
+    &_blue_white {
+      background-color: white;
+      color: $color-blue;
+      border-color: $color-blue;
+
+      &:hover {
+        background-color: #f0f0f0;
+        border-color: $color-blueDarken;
+        color: $color-blueDarken;
+      }
+    }
+
+    &_black {
+      background-color: $color-Dark;
+      color: white;
+      border: none;
+
+      &:hover {
+        background-color: $color-VeryDark;
+        border-color: $color-blueDarken;
+        color: white;
+      }
+    }
+  }
+
+  .cross_start {
+    align-self: flex-start;
+  }
+
+  .cross_center {
+    align-self: center;
+  }
+
+  .cross_end {
+    align-self: flex-end;
+  }
+}
+
+@import 'header.scss';
+@import 'mainpage.scss';
+@import 'footer.scss';
+@import 'collection-list.scss';
+@import 'collection-photos.scss';
+@import 'photo.scss';

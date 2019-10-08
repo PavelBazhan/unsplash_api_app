@@ -1,0 +1,48 @@
+.content {
+  @include flexible(column nowrap, center, center);
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 100vw;
+
+  .error-block {
+    padding: 1em 3em;
+    color: #D24040;
+    border: 1px solid #D24040;
+    background: #F9DCDC;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .photo-block {
+    @include flexible(column nowrap, center, center);
+    width: 960px;
+
+    .photo-block__header {
+      width: 100%;
+    }
+
+    .photo-block__image {
+      width: 960px;
+      min-width: 400px;
+      margin-bottom: 1em;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .photo-block__full-link {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .photo-block__full-link {
+      @include flexible(row nowrap, space-between, center);
+      width: 100%;
+    }
+  }
+
+}
