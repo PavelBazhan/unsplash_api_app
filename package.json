@@ -1,6 +1,6 @@
 {
   "name": "unsplash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "frontend developer test",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --host 192.168.0.103",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "express": "^4.17.1",
     "moment": "^2.24.0",
     "vanilla-router": "^1.2.7"
   }
